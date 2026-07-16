@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static landing page for **Forêt Club** — guided group forest walks in Strasbourg. The entire site is a single self-contained file: `index.html`. All content is in French (`lang="fr"`).
+Static landing page for **Forêt Club** — collective forest walks for dogs in Strasbourg ("votre chien retrouve ses copains en forêt"). The site is a single `index.html` plus an `images/` folder. All content is in French (`lang="fr"`).
 
 There is no build system, package manager, linter, or test suite. To preview locally:
 
@@ -15,8 +15,8 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ## Architecture of index.html
 
 - **Single-file design**: one inline `<style>` block, **no JavaScript at all**. Interactivity (smooth scroll, hover states) is pure CSS. Keep it that way unless explicitly asked to add scripts.
-- **Images policy**: images belong in an `images/` folder at the repo root and are referenced from the HTML with relative paths (`<img src="images/foo.jpg">`). **Never embed images as base64 data URIs.** The current file still contains legacy base64-embedded images (10 JPEG + 1 PNG, ~1.8 MB total) — when adding or replacing an image, extract it to `images/` instead of inlining, and migrate nearby legacy ones opportunistically.
-- Because of the remaining base64 blobs, **never read the whole file** — target sections with Grep or offset/limit reads to avoid pulling megabytes of base64 into context. Editing text/CSS is safe with exact-string edits.
+- **Images policy**: all images live in `images/` at the repo root and are referenced with relative paths (`<img src="images/foo.jpg">`). **Never embed images as base64 data URIs.** Full-width photos use the `foret-*.jpg` naming, the founder-bio grid uses `oriane-*.jpg`, plus `logo.png`.
+- The four `foret-*` photo-breaks use `loading="lazy"`, so they don't appear in naive full-page screenshots — scroll through the page first if capturing renders for visual comparison.
 - **Design tokens** live in `:root` CSS variables at the top of the `<style>` block: `--fuchsia` (#FF0099, accent/CTA), `--mint`, `--neon` (badge), `--jungle` (dark text), `--ivory` (background), `--vert-pale`.
 - **Typography**: Playfair Display (headings, italic accents) + Inter (body), loaded from Google Fonts — the only external stylesheet.
 - **Signup funnel**: CTA buttons link to an external Tally form (`https://tally.so/r/J9YoJJ`). There is no form handling in the page itself.
