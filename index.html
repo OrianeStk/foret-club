@@ -36,18 +36,7 @@
 html { scroll-behavior:smooth }
 body { font-family:'Inter',sans-serif; background:var(--ivory); color:var(--jungle); overflow-x:hidden; font-weight:300; line-height:1.7 }
 
-/* NAV */
-nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 48px; display:flex; align-items:stretch; justify-content:space-between; background:rgba(254,250,232,0.96); backdrop-filter:blur(16px); border-bottom:1px solid rgba(12,32,21,0.07); min-height:60px }
-.nav-logo { font-family:'Playfair Display',serif; font-size:14px; font-weight:700; color:var(--jungle); letter-spacing:.02em; display:flex; align-items:center }
-.nav-logo span { color:var(--fuchsia) }
-.nav-links { display:flex; align-items:center; gap:28px; list-style:none }
-.nav-links a { font-size:13px; font-weight:400; color:rgba(12,32,21,.6); text-decoration:none; letter-spacing:.01em; transition:color .15s; white-space:nowrap }
-.nav-links a:hover { color:var(--jungle) }
-.nav-right { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; padding:10px 0 }
-.nav-cta { background:var(--fuchsia); color:#fff; font-size:13px; font-weight:500; padding:9px 22px; border-radius:100px; border:none; cursor:pointer; font-family:'Inter',sans-serif; text-decoration:none; display:inline-block; transition:opacity .15s; white-space:nowrap }
-.nav-cta:hover { opacity:.85 }
-.nav-logo-img { height:32px; width:auto; display:block; opacity:.9 }
-@media(max-width:900px){ .nav-links { display:none } }
+/* NAV supprimée */
 
 /* BADGE */
 .badge { display:inline-block; background:var(--neon); color:var(--jungle); font-size:12px; font-weight:600; padding:5px 14px; border-radius:100px; letter-spacing:.02em; margin-bottom:22px }
@@ -168,20 +157,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 48px; displ
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <span class="nav-logo">Forêt <span>Club</span></span>
-  <ul class="nav-links">
-    <li><a href="#concept">C'est quoi</a></li>
-    <li><a href="#oriane">Qui je suis</a></li>
-    <li><a href="#tarif">Tarif</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-  <div class="nav-right">
-    <a href="https://tally.so/r/J9YoJJ" target="_blank" class="nav-cta">Je rejoins le Club</a>
-    <img src="images/logo-foret-club.png" alt="Forêt Club" class="nav-logo-img">
-  </div>
-</nav>
+
 
 <!-- HERO -->
 <div class="hero">
