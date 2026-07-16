@@ -9,14 +9,12 @@
 <meta name="author" content="Oriane, Forêt Club">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://foret-club.netlify.app/">
-
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Forêt Club — Balades collectives en forêt pour votre chien à Strasbourg">
 <meta property="og:description" content="Votre chien retrouve ses copains en forêt pendant que vous travaillez. Groupes fixes, prise en charge à domicile, forêts autour de Strasbourg.">
 <meta property="og:image" content="images/groupe-chiens-foret.jpg">
 <meta property="og:locale" content="fr_FR">
-
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Forêt Club — Balades collectives pour chiens à Strasbourg">
@@ -38,17 +36,17 @@
 html { scroll-behavior:smooth }
 body { font-family:'Inter',sans-serif; background:var(--ivory); color:var(--jungle); overflow-x:hidden; font-weight:300; line-height:1.7 }
 
-/* ── NAV ── */
+/* NAV */
 nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; display:flex; align-items:center; justify-content:space-between; background:rgba(254,250,232,0.94); backdrop-filter:blur(16px); border-bottom:1px solid rgba(12,32,21,0.07) }
 .nav-logo { font-family:'Playfair Display',serif; font-size:14px; font-weight:700; color:var(--jungle); letter-spacing:.02em }
 .nav-logo span { color:var(--fuchsia) }
 .nav-cta { background:var(--fuchsia); color:#fff; font-size:13px; font-weight:500; padding:11px 26px; border-radius:100px; border:none; cursor:pointer; font-family:'Inter',sans-serif; text-decoration:none; display:inline-block; transition:opacity .15s }
 .nav-cta:hover { opacity:.85 }
 
-/* ── PILL BADGE ── */
+/* BADGE */
 .badge { display:inline-block; background:var(--neon); color:var(--jungle); font-size:12px; font-weight:600; padding:5px 14px; border-radius:100px; letter-spacing:.02em; margin-bottom:22px }
 
-/* ── HERO ── */
+/* HERO */
 .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; text-align:center; padding:0 32px 12vh; position:relative; overflow:hidden }
 .hero-bg { position:absolute; inset:0; width:100%; height:120%; top:-5%; object-fit:cover; object-position:center 70%; z-index:0 }
 .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%); z-index:1 }
@@ -56,25 +54,23 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .hero-title { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,68px); font-weight:900; line-height:1.07; color:#fff; margin-bottom:22px; letter-spacing:-.01em; max-width:720px; text-shadow:0 2px 24px rgba(0,0,0,.4) }
 .hero-title em { color:var(--fuchsia); font-style:italic }
 .hero-sub { font-size:clamp(15px,1.8vw,18px); color:rgba(255,255,255,.88); max-width:440px; line-height:1.75; margin:0 auto 40px; text-shadow:0 1px 8px rgba(0,0,0,.4) }
-.hero-details { font-size:13px; color:rgba(255,255,255,.7); letter-spacing:.04em }
 .badge { background:var(--neon); color:var(--jungle) }
 
-/* ── PHOTO PLEINE LARGEUR ── */
+/* PHOTO PLEINE LARGEUR */
 .photo-break { width:100%; height:clamp(320px,45vw,580px); overflow:hidden; position:relative }
 .photo-break img { width:100%; height:100%; object-fit:cover; object-position:center; display:block }
 .photo-break::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(254,250,232,0.18) 0%, rgba(254,250,232,0) 30%, rgba(254,250,232,0) 70%, rgba(254,250,232,0.22) 100%) }
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 .section { padding:100px 32px; max-width:840px; margin:0 auto }
 .section.wide { max-width:1000px }
 .section-label { display:inline-block; background:var(--neon); color:var(--jungle); font-size:14px; font-weight:600; padding:6px 16px; border-radius:100px; letter-spacing:.02em; margin-bottom:24px }
 .section-title { font-family:'Playfair Display',serif; font-size:clamp(28px,4vw,46px); font-weight:700; line-height:1.1; color:var(--jungle); margin-bottom:24px; letter-spacing:-.01em }
 .section-lead { font-size:17px; line-height:1.8; color:rgba(12,32,21,.65); max-width:560px; margin-bottom:60px }
 
-/* ── FOND VERT PÂLE ── */
 .bg-vert { background:var(--vert-pale) }
 
-/* ── CONCEPT : liste aérée sans cards ── */
+/* CONCEPT */
 .concept-list { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-top:52px }
 .concept-item { display:flex; flex-direction:column; align-items:flex-start; gap:16px }
 .concept-icon { width:52px; height:52px; background:var(--ivory); border:1px solid rgba(12,32,21,.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0 }
@@ -82,7 +78,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .concept-item h3 { font-family:'Playfair Display',serif; font-size:19px; font-weight:700; color:var(--jungle); margin-bottom:8px }
 .concept-item p { font-size:16px; color:rgba(12,32,21,.6); line-height:1.7 }
 
-/* ── BÉNÉFICES ── */
+/* BÉNÉFICES */
 .benefits { display:flex; flex-direction:column; margin-top:52px }
 .benefit { display:grid; grid-template-columns:64px 1fr; gap:20px; align-items:start; padding:36px 0; border-bottom:1px solid rgba(12,32,21,.08) }
 .benefit:last-child { border-bottom:none }
@@ -90,14 +86,14 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .benefit h3 { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:var(--jungle); margin-bottom:8px }
 .benefit p { font-size:16px; color:rgba(12,32,21,.6); line-height:1.75 }
 
-/* ── POUR QUI : pas de cards, texte direct ── */
+/* POUR QUI */
 .pour-qui-list { display:flex; flex-direction:column; gap:36px; margin-top:52px }
 .pour-qui-item { display:grid; grid-template-columns:44px 1fr; gap:20px; align-items:start }
 .pour-qui-icon { font-size:22px; line-height:1 }
 .pour-qui-item h3 { font-size:15px; font-weight:500; color:var(--jungle); margin-bottom:6px }
 .pour-qui-item p { font-size:14px; color:rgba(12,32,21,.6); line-height:1.7 }
 
-/* ── CHIENS OUI/NON ── */
+/* CHIENS */
 .chiens-cols { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:52px }
 .chiens-col-title { display:inline-block; font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:4px 12px; border-radius:100px; margin-bottom:20px }
 .chiens-col-title.oui { background:rgba(0,204,102,.12); color:#0A7A40 }
@@ -109,37 +105,20 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .chiens-col.non li::before { background:var(--fuchsia) }
 .chiens-note { font-size:13px; color:rgba(12,32,21,.4); font-style:italic; margin-top:24px; line-height:1.6 }
 
-/* ── ORIANE ── */
+/* ORIANE */
 .oriane-grid { display:grid; grid-template-columns:1fr 340px; gap:64px; align-items:start; margin-top:52px }
 .oriane-text { display:flex; flex-direction:column; gap:18px }
 .oriane-text p { font-size:15px; line-height:1.85; color:rgba(12,32,21,.7) }
 .oriane-text p:first-child { font-size:17px; color:var(--jungle); font-weight:400 }
 .oriane-photos { display:flex; flex-direction:column; gap:3px; position:sticky; top:80px }
-.photo-slot { background:rgba(12,32,21,.04); border:1px dashed rgba(12,32,21,.12); height:200px; display:flex; align-items:center; justify-content:center; font-size:12px; color:rgba(12,32,21,.3); font-style:italic }
 
-/* ── CONFIANCE : grille sans cards ── */
-.confiance-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:52px }
-.confiance-item { padding:32px 28px; border-left:1px solid rgba(12,32,21,.08) }
-.confiance-item:nth-child(1) { border-left:none }
-.confiance-item:nth-child(4) { border-left:none }
-.confiance-item:nth-child(4),.confiance-item:nth-child(5) { border-top:1px solid rgba(12,32,21,.08) }
-.confiance-icon { font-size:20px; margin-bottom:14px; display:block }
-.confiance-item h3 { font-size:13px; font-weight:600; color:var(--jungle); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px }
-.confiance-item p { font-size:13px; color:rgba(12,32,21,.55); line-height:1.6 }
-
-/* ── TARIF ── */
-.tarif-bloc { display:flex; gap:0; border:1px solid rgba(12,32,21,.1); margin-top:52px; background:#fff }
-.tarif-prix { flex-shrink:0; min-width:220px; padding:52px 48px; text-align:center; border-right:1px solid rgba(12,32,21,.08) }
-.prix-montant { font-family:'Playfair Display',serif; font-size:88px; font-weight:900; color:var(--jungle); line-height:1; letter-spacing:-.02em }
-.prix-devise { font-size:32px; color:var(--fuchsia); font-weight:700; vertical-align:top; display:inline-block; margin-top:12px }
-.prix-label { font-size:11px; color:rgba(12,32,21,.4); margin-top:10px; text-transform:uppercase; letter-spacing:.05em }
-.tarif-details { padding:52px 48px; flex:1 }
+/* TARIF */
 .tarif-list { list-style:none; display:flex; flex-direction:column; gap:14px }
 .tarif-list li { font-size:14px; color:rgba(12,32,21,.7); display:flex; gap:14px; align-items:flex-start; line-height:1.6 }
 .check { display:inline-flex; flex-shrink:0; font-size:18px; margin-top:2px }
 .tarif-note { font-size:13px; font-style:italic; color:rgba(12,32,21,.45); margin-top:28px; line-height:1.7 }
 
-/* ── CTA DARK ── */
+/* CTA */
 .cta-section { background:var(--jungle); padding:120px 32px; text-align:center }
 .cta-title { font-family:'Playfair Display',serif; font-size:clamp(28px,4.5vw,52px); font-weight:900; color:var(--ivory); line-height:1.08; max-width:560px; margin:0 auto 18px; letter-spacing:-.01em }
 .cta-sub { font-size:15px; color:rgba(254,250,232,.45); max-width:420px; margin:0 auto 52px; line-height:1.75 }
@@ -147,7 +126,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .cta-btn:hover { opacity:.85 }
 .cta-note { margin-top:20px; font-size:11px; color:rgba(254,250,232,.28); letter-spacing:.03em }
 
-/* ── FAQ ── */
+/* FAQ */
 .faq-section { background:var(--ivory); padding:100px 32px; border-top:1px solid rgba(12,32,21,.08) }
 .faq-inner { max-width:700px; margin:0 auto }
 .faq-list { margin-top:52px }
@@ -157,16 +136,13 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .faq-a { font-size:14px; color:rgba(12,32,21,.62); line-height:1.75 }
 .faq-a p+p { margin-top:10px }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:680px){
   nav { padding:14px 20px }
   .section { padding:72px 20px }
   .chiens-cols,.oriane-grid { grid-template-columns:1fr }
-  .confiance-grid { grid-template-columns:1fr; }
-  .confiance-item { border-left:none; border-top:1px solid rgba(12,32,21,.08) }
-  .confiance-item:nth-child(1) { border-top:none }
+  .concept-list { grid-template-columns:1fr }
   .tarif-bloc { flex-direction:column }
-  .tarif-prix { border-right:none; border-bottom:1px solid rgba(12,32,21,.08) }
 }
 </style>
 
@@ -177,20 +153,20 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
   "name": "Forêt Club",
   "description": "Service de balade collective pour chiens en forêt autour de Strasbourg. Groupes fixes de 4 à 7 chiens, prise en charge à domicile.",
   "url": "https://foret-club.netlify.app/",
-  "areaServed": {
-    "@type": "City",
-    "name": "Strasbourg"
-  },
+  "areaServed": { "@type": "City", "name": "Strasbourg" },
   "serviceType": "Promenade de chiens en groupe",
-  "founder": {
-    "@type": "Person",
-    "name": "Oriane"
-  },
+  "founder": { "@type": "Person", "name": "Oriane" },
   "openingDate": "2026-09-01"
 }
 </script>
 </head>
 <body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Forêt <span>Club</span></span>
+  <a href="https://tally.so/r/J9YoJJ" target="_blank" class="nav-cta">Je rejoins le Club</a>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
@@ -203,7 +179,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- CONCEPT -->
 <div style="background:var(--ivory)">
   <div class="section">
-    <span class="section-label">Le concept</span>
+    <span class="section-label">Bienvenue au Club</span>
     <h2 class="section-title">C'est quoi, le Forêt Club ?</h2>
     <p class="section-lead">Des groupes fixes de 4 à 7 chiens qui se retrouvent toutes les semaines pour aller courir, renifler, creuser et jouer ensemble dans les forêts autour de Strasbourg.</p>
     <div class="concept-list">
@@ -235,7 +211,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- BÉNÉFICES -->
 <div class="bg-vert">
   <div class="section">
-    <span class="section-label">Ce que ça change pour lui</span>
+    <span class="section-label">Pourquoi les chiens adorent ?</span>
     <h2 class="section-title">Une balade pensée pour ses vrais besoins.</h2>
     <div class="benefits">
       <div class="benefit">
@@ -256,7 +232,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
         <div class="benefit-num">3</div>
         <div>
           <h3>Il peut enfin être un chien</h3>
-          <p>Courir, flairer, grimper, se rouler dans les feuilles, suivre une piste… La forêt lui permet d'exprimer des comportements naturels qu'il ne peut pas toujours vivre en ville.</p>
+          <!-- MODIFICATION 1 : flairer → renifler, suivre une piste → creuser -->
+          <p>Courir, renifler, grimper, se rouler dans les feuilles, creuser… La forêt lui permet d'exprimer des comportements naturels qu'il ne peut pas toujours vivre en ville.</p>
         </div>
       </div>
       <div class="benefit">
@@ -270,7 +247,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
   </div>
 </div>
 
-<!-- PHOTO 2 : chiens qui jouent ensemble -->
+<!-- PHOTO 2 -->
 <div class="photo-break">
   <img src="images/chiens-exploration-foret.jpg" alt="Chiens explorant ensemble en forêt lors d'une balade collective près de Strasbourg" loading="lazy">
 </div>
@@ -309,7 +286,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- POUR QUELS CHIENS -->
 <div class="bg-vert">
   <div class="section wide">
-    <span class="section-label">C'est pour quels chiens ?</span>
+    <span class="section-label">Est-ce fait pour votre chien ?</span>
     <h2 class="section-title">Les groupes se construisent progressivement.</h2>
     <p class="section-lead">Chaque chien est différent. Avant d'intégrer définitivement un groupe, nous prenons le temps de faire connaissance lors de plusieurs balades. Cela permet de vérifier que le groupe lui convient… et qu'il convient au groupe.</p>
     <div class="chiens-cols">
@@ -335,15 +312,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
       </div>
     </div>
     <p style="margin-top:44px;font-size:14px;line-height:1.75;color:rgba(12,32,21,.55);font-style:italic">💬 L'objectif n'est pas de remplir un groupe. L'objectif est que chaque chien s'y sente bien. C'est pourquoi l'intégration se fait progressivement, au fil de plusieurs balades.</p>
+
+    <!-- MODIFICATION 2 : nouveau bloc CTA intermédiaire -->
     <div style="margin-top:52px;padding:40px;background:var(--vert-pale);border-radius:4px;text-align:center">
-      <p style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--jungle);margin-bottom:10px">Votre chien correspond au profil ?</p>
-      <p style="font-size:15px;color:rgba(12,32,21,.6);margin-bottom:28px;line-height:1.7">Remplissez le formulaire de pré-inscription. Je reviens vers vous pour vérifier ensemble que le Forêt Club lui correspond.</p>
-      <a href="https://tally.so/r/J9YoJJ" target="_blank" style="display:inline-block;background:var(--fuchsia);color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;padding:16px 40px;border-radius:100px;text-decoration:none;letter-spacing:.03em;transition:opacity .15s">On vérifie ensemble si ça lui correspond →</a>
+      <p style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--jungle);margin-bottom:10px">Et si on en parlait ?</p>
+      <p style="font-size:15px;color:rgba(12,32,21,.6);margin-bottom:28px;line-height:1.7">Remplissez le formulaire en 2 minutes.<br>Je reviendrai personnellement vers vous pour voir si le Forêt Club correspond à votre chien... et répondre à toutes vos questions.</p>
+      <a href="https://tally.so/r/J9YoJJ" target="_blank" style="display:inline-block;background:var(--fuchsia);color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;padding:16px 40px;border-radius:100px;text-decoration:none;letter-spacing:.03em;transition:opacity .15s">Je présente mon chien →</a>
     </div>
+
   </div>
 </div>
 
-<!-- PHOTO 3 : forêt automne -->
+<!-- PHOTO 3 -->
 <div class="photo-break">
   <img src="images/chien-foret-naturelle.jpg" alt="Chien épanoui lors d'une balade en forêt près de Strasbourg" loading="lazy">
 </div>
@@ -351,7 +331,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- ORIANE -->
 <div style="background:var(--ivory)">
   <div class="section wide">
-    <span class="section-label">Qui je suis</span>
+    <span class="section-label">Pourquoi j'ai créé le Forêt Club ?</span>
     <h2 class="section-title"><em style="color:var(--fuchsia);font-style:italic">Oriane</em>, fondatrice<br>du Forêt Club.</h2>
     <div class="oriane-grid">
       <div class="oriane-text">
@@ -384,7 +364,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
   </div>
 </div>
 
-<!-- PHOTOS ORIANE pleine largeur -->
+<!-- PHOTOS ORIANE -->
 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:1035px;margin:0 auto">
   <img src="images/oriane-plage-chien.png" loading="lazy" alt="Oriane avec son chien sur une plage de galets" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
   <img src="images/missak-prairie.png" loading="lazy" alt="Missak qui court dans une prairie fleurie" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
@@ -402,11 +382,10 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- TARIF -->
 <div style="background:var(--ivory)">
   <div class="section wide">
-    <span class="section-label">Tarif</span>
+    <span class="section-label">Tout est compris</span>
     <h2 class="section-title" style="margin-top:16px">Une demi-journée de bonheur pour votre chien</h2>
     <p style="font-size:15px;line-height:1.8;color:rgba(12,32,21,.65);margin-bottom:40px">Pendant que vous travaillez, il retrouve sa bande de copains, part explorer la forêt, puis rentre à la maison apaisé, bien dépensé... et souvent impatient de recommencer.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
-      <img src="images/ropin-sourire.png" alt="Ropin souriant dans les fleurs jaunes" style="width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;border-radius:4px 4px 0 0;display:block"><p style="font-size:12px;color:rgba(12,32,21,.45);font-style:italic;text-align:center;padding:10px 0;border-radius:0 0 4px 4px">Missak, 2009 - 2026<br>Celui grâce à qui le Forêt Club existe.</p>
       <div style="background:#fff;padding:40px;border-radius:4px">
         <div style="margin-bottom:28px">
           <div style="font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:var(--jungle);line-height:1;letter-spacing:-.02em"><span style="font-size:24px;color:var(--fuchsia);font-weight:700;vertical-align:top;display:inline-block;margin-top:8px">€</span>40</div>
@@ -422,6 +401,10 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
         </ul>
         <p class="tarif-note">Engagement : 1 balade minimum par semaine, pour préserver la stabilité des groupes.</p>
       </div>
+      <div>
+        <img src="images/ropin-sourire.png" alt="Ropin souriant dans les fleurs jaunes" style="width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;border-radius:4px 4px 0 0;display:block">
+        <p style="font-size:12px;color:rgba(12,32,21,.45);font-style:italic;text-align:center;padding:10px 0;border-radius:0 0 4px 4px">Missak, 2009 - 2026<br>Celui grâce à qui le Forêt Club existe.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -431,7 +414,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
   <img src="images/groupe-chiens-sentier.jpg" alt="Groupe de chiens en balade collective sur un sentier forestier autour de Strasbourg" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 65%">
 </div>
 
-<!-- CTA -->
+<!-- CTA FINAL -->
 <div class="cta-section" id="cta">
   <h2 class="cta-title">Les premiers groupes se forment en ce moment.</h2>
   <p class="cta-sub">Pré-inscrivez votre chien dès maintenant pour lui réserver une place dans un groupe qui démarrera en septembre.</p>
@@ -442,7 +425,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 <!-- FAQ -->
 <div class="faq-section">
   <div class="faq-inner">
-    <span class="section-label">Questions fréquentes</span>
+    <span class="section-label">Vous vous posez peut-être ces questions</span>
     <h2 class="section-title" style="margin-top:8px">Je réponds à vos questions.</h2>
     <div class="faq-list">
       <div class="faq-item">
