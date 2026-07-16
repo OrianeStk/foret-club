@@ -31,13 +31,15 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .badge { display:inline-block; background:var(--neon); color:var(--jungle); font-size:12px; font-weight:600; padding:5px 14px; border-radius:100px; letter-spacing:.02em; margin-bottom:22px }
 
 /* ── HERO ── */
-.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 32px 100px; background:var(--ivory) }
-.hero-logo { margin-bottom:52px }
-.hero-logo img { height:180px; width:auto }
-.hero-title { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,68px); font-weight:900; line-height:1.07; color:var(--jungle); margin-bottom:22px; letter-spacing:-.01em; max-width:720px }
+.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px 32px; position:relative; overflow:hidden }
+.hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; z-index:0 }
+.hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%); z-index:1 }
+.hero > *:not(.hero-bg) { position:relative; z-index:2 }
+.hero-title { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,68px); font-weight:900; line-height:1.07; color:#fff; margin-bottom:22px; letter-spacing:-.01em; max-width:720px; text-shadow:0 2px 24px rgba(0,0,0,.4) }
 .hero-title em { color:var(--fuchsia); font-style:italic }
-.hero-sub { font-size:clamp(15px,1.8vw,18px); color:rgba(12,32,21,.6); max-width:440px; line-height:1.75; margin:0 auto 52px }
-.hero-details { font-size:13px; color:rgba(12,32,21,.45); letter-spacing:.04em }
+.hero-sub { font-size:clamp(15px,1.8vw,18px); color:rgba(255,255,255,.88); max-width:440px; line-height:1.75; margin:0 auto 40px; text-shadow:0 1px 8px rgba(0,0,0,.4) }
+.hero-details { font-size:13px; color:rgba(255,255,255,.7); letter-spacing:.04em }
+.badge { background:var(--neon); color:var(--jungle) }
 
 /* ── PHOTO PLEINE LARGEUR ── */
 .photo-break { width:100%; height:clamp(320px,45vw,580px); overflow:hidden; position:relative }
@@ -152,23 +154,13 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">Forêt <span>Club</span></div>
-  <a href="https://tally.so/r/J9YoJJ" target="_blank" class="nav-cta">Je rejoins le Club</a>
-</nav>
-
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-logo"><img src="images/logo.png" alt="Forêt Club"></div>
+  <img class="hero-bg" src="images/groupe-chiens-foret.jpg" alt="">
   <span class="badge">Balades collectives en forêt · Strasbourg · Septembre 2026</span>
   <h1 class="hero-title">Votre chien retrouve ses copains en forêt<br>pendant que <em>vous travaillez.</em></h1>
   <p class="hero-sub">Des balades en groupe encadrées par une pro. Je viens chercher votre chien et le ramène chez vous.</p>
   <p class="hero-details">🐾 Prise en charge à domicile &nbsp;·&nbsp; 1h30 en forêt &nbsp;·&nbsp; Retour à la maison</p>
-</div>
-
-<!-- PHOTO 1 : chiens qui courent -->
-<div class="photo-break">
-  <img src="images/foret-1.jpg" alt="Groupe de chiens courant en forêt vers nous" loading="lazy">
 </div>
 
 <!-- CONCEPT -->
@@ -243,7 +235,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 
 <!-- PHOTO 2 : chiens qui jouent ensemble -->
 <div class="photo-break">
-  <img src="images/foret-2.jpg" alt="Chiens explorant ensemble en forêt, lumière dorée" loading="lazy">
+  <img src="images/chiens-exploration-foret.jpg" alt="Chiens explorant ensemble en forêt, lumière dorée" loading="lazy">
 </div>
 
 <!-- POUR QUI -->
@@ -311,7 +303,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 
 <!-- PHOTO 3 : forêt automne -->
 <div class="photo-break">
-  <img src="images/foret-3.jpg" alt="Chien heureux en forêt, lumière naturelle" loading="lazy">
+  <img src="images/chien-foret-naturelle.jpg" alt="Chien heureux en forêt, lumière naturelle" loading="lazy">
 </div>
 
 <!-- ORIANE -->
@@ -336,16 +328,23 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
         <p>Aujourd'hui, j'ai envie d'offrir à d'autres chiens ce que les miens ont toujours aimé : retrouver les mêmes copains chaque semaine, partir en forêt et vivre de vraies aventures, pendant que leurs humains peuvent travailler l'esprit tranquille.</p>
       </div>
       <div class="oriane-photos">
-  <img src="images/oriane-1.jpg" alt="Oriane avec ses deux chiens Ropin et Missak" style="width:100%;display:block;margin-bottom:3px;object-fit:cover;height:280px">
+  <img src="images/oriane-cheval-automne.png" alt="Oriane avec son chien et son cheval en automne" style="width:100%;display:block;margin-bottom:3px;object-fit:cover;height:260px">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px">
-    <img src="images/oriane-2.jpg" alt="Ropin et Missak dans les herbes fleuries" style="width:100%;height:190px;object-fit:cover;display:block">
-    <img src="images/oriane-3.jpg" alt="Ropin et Missak à la plage" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/oriane-plage-chien.png" alt="Oriane avec son chien sur une plage de galets" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/oriane-rochers-foret.png" alt="Oriane et son chien sur des rochers en forêt" style="width:100%;height:190px;object-fit:cover;display:block">
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px">
+    <img src="images/deux-chiens-canape.png" alt="Deux chiens sur le canapé qui regardent un fish and chips" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/oriane-cheval-couche.png" alt="Oriane avec son chien et son cheval couché dans un pré" style="width:100%;height:190px;object-fit:cover;display:block">
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px">
+    <img src="images/missak-portrait.png" alt="Portrait de Missak regardant la caméra" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/missak-prairie.png" alt="Missak qui court dans une prairie fleurie" style="width:100%;height:190px;object-fit:cover;display:block">
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-    <img src="images/oriane-4.jpg" alt="Deux chiens sur sentier face à la mer" style="width:100%;height:190px;object-fit:cover;display:block">
-    <img src="images/oriane-5.jpg" alt="Missak courant dans la montagne fleurie" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/ropin-missak-herbes.jpg" alt="Ropin et Missak dans les herbes fleuries" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="images/ropin-missak-plage.jpg" alt="Ropin et Missak à la plage" style="width:100%;height:190px;object-fit:cover;display:block">
   </div>
-  <img src="images/oriane-6.jpg" alt="Ropin au coucher de soleil" style="width:100%;display:block;margin-top:3px;object-fit:cover;height:220px">
 </div>
     </div>
   </div>
@@ -412,7 +411,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 
 <!-- PHOTO AVANT CTA -->
 <div class="photo-break" style="height:clamp(380px,50vw,620px)">
-  <img src="images/foret-4.jpg" alt="Groupe de chiens de dos sur un sentier forestier" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+  <img src="images/groupe-chiens-sentier.jpg" alt="Groupe de chiens de dos sur un sentier forestier" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
 </div>
 
 <!-- CTA -->
