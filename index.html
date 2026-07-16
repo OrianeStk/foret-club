@@ -31,13 +31,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 .badge { display:inline-block; background:var(--neon); color:var(--jungle); font-size:12px; font-weight:600; padding:5px 14px; border-radius:100px; letter-spacing:.02em; margin-bottom:22px }
 
 /* ── HERO ── */
-.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 32px 100px; background:var(--ivory) }
+.hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 32px 100px; position:relative; overflow:hidden; background:var(--jungle) }
+.hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; opacity:.55 }
+.hero > * { position:relative; z-index:1 }
 .hero-logo { margin-bottom:52px }
-.hero-logo img { height:180px; width:auto }
-.hero-title { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,68px); font-weight:900; line-height:1.07; color:var(--jungle); margin-bottom:22px; letter-spacing:-.01em; max-width:720px }
+.hero-logo img { height:180px; width:auto; filter:brightness(0) invert(1) }
+.hero-title { font-family:'Playfair Display',serif; font-size:clamp(36px,5.5vw,68px); font-weight:900; line-height:1.07; color:#fff; margin-bottom:22px; letter-spacing:-.01em; max-width:720px; text-shadow:0 2px 24px rgba(0,0,0,.3) }
 .hero-title em { color:var(--fuchsia); font-style:italic }
-.hero-sub { font-size:clamp(15px,1.8vw,18px); color:rgba(12,32,21,.6); max-width:440px; line-height:1.75; margin:0 auto 52px }
-.hero-details { font-size:13px; color:rgba(12,32,21,.45); letter-spacing:.04em }
+.hero-sub { font-size:clamp(15px,1.8vw,18px); color:rgba(255,255,255,.85); max-width:440px; line-height:1.75; margin:0 auto 52px; text-shadow:0 1px 8px rgba(0,0,0,.3) }
+.hero-details { font-size:13px; color:rgba(255,255,255,.65); letter-spacing:.04em }
+.badge { background:var(--neon); color:var(--jungle) }
 
 /* ── PHOTO PLEINE LARGEUR ── */
 .photo-break { width:100%; height:clamp(320px,45vw,580px); overflow:hidden; position:relative }
@@ -159,16 +162,12 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 48px; di
 
 <!-- HERO -->
 <div class="hero">
+  <img class="hero-bg" src="images/groupe-chiens-foret.jpg" alt="">
   <div class="hero-logo"><img src="images/logo-foret-club.png" alt="Forêt Club"></div>
   <span class="badge">Balades collectives en forêt · Strasbourg · Septembre 2026</span>
   <h1 class="hero-title">Votre chien retrouve ses copains en forêt<br>pendant que <em>vous travaillez.</em></h1>
   <p class="hero-sub">Des balades en groupe encadrées par une pro. Je viens chercher votre chien et le ramène chez vous.</p>
   <p class="hero-details">🐾 Prise en charge à domicile &nbsp;·&nbsp; 1h30 en forêt &nbsp;·&nbsp; Retour à la maison</p>
-</div>
-
-<!-- PHOTO 1 : chiens qui courent -->
-<div class="photo-break">
-  <img src="images/groupe-chiens-foret.jpg" alt="Groupe de chiens courant en forêt vers nous" loading="lazy">
 </div>
 
 <!-- CONCEPT -->
