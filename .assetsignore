@@ -1,0 +1,9 @@
+.git
+.gitignore
+.nwave
+.playwright-mcp
+.assetsignore
+CLAUDE.md
+wrangler.jsonc
+node_modules
+.github

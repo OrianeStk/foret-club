@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "foret-club",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "."
+  },
+  "routes": [
+    { "pattern": "foret-club.com", "custom_domain": true },
+    { "pattern": "www.foret-club.com", "custom_domain": true }
+  ]
+}
